@@ -21,26 +21,20 @@ defineProps({
       <div class="content">
         <div class="title">
           <ContentSlot :use="$slots.title" unwrap="p">
-            Hero title
+            <!-- Aquí estaba el título -->
           </ContentSlot>
         </div>
         <div class="description">
           <ContentSlot :use="$slots.description" unwrap="p">
-            Hero description
+            <!-- Aquí estaba la descripción -->
           </ContentSlot>
         </div>
       </div>
-      <NuxtImg
-        v-if="image"
-        :class="imagePosition"
-        :src="image"
-        :alt="imageAlt"
-        :width="16"
-        :height="9"
-      />
+      <!-- Eliminamos esta imagen -->
     </div>
   </section>
 </template>
+
 
 <style scoped lang="ts">
 css({
