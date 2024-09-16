@@ -10,20 +10,14 @@ function handleClick() {
 
 <template>
   <nav>
-    <ul>
-      <li
-        v-for="link of navigation"
-        :key="link._path"
-      >
-        <NuxtLink
-          :to="link._path"
-          @click="handleClick"
-        >
-          <span class="underline-fx" />
-          {{ link.title }}
-        </NuxtLink>
-      </li>
-    </ul>
+<ul>
+  <li v-for="link of navigation" :key="link._path">
+    <NuxtLink :to="link._path" @click="handleClick">
+      <span class="underline-fx" />
+      {{ link.title }}
+    </NuxtLink>
+  </li>
+</ul>
   </nav>
 </template>
 
