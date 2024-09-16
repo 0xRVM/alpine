@@ -1,6 +1,6 @@
 export default defineAppConfig({
   alpine: {
-    title: 'Alpine',
+    title: 'Primate',
     description: 'The minimalist blog theme',
     image: {
       src: '/social-card-preview.png',
@@ -11,9 +11,9 @@ export default defineAppConfig({
     header: {
       position: 'right',
       logo: {
-        path: '/logo.svg',
-        pathDark: '/logo-dark.svg',
-        alt: 'alpine'
+        path: '/primatelogo-blanco.png',
+        pathDark: '/primatelogo-negro.png',
+        alt: 'Primate Logo'
       }
     },
     footer: {
