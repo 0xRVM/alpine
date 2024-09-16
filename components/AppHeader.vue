@@ -20,15 +20,11 @@ const show = ref(false)
       <MainNav @link-click="show = !show" />
     </div>
 
+   <img src="/primatelogo.png" alt="Logo Primate" width="120" height="60" />
+
     <div class="logo">
-      <NuxtLink v-if="alpine.header.logo" to="/">
-        <!-- TODO: width/height doesn't make much sense here, but Lighthouse requires it. 
-        Used current Alpine logo ratio, will break on enduser logo -->
-        <NuxtImg class="dark-img" :src="alpine.header.logo.pathDark" :alt="alpine.header.logo.alt" width="89" height="31" />
-        <NuxtImg class="light-img" :src="alpine.header.logo.path" :alt="alpine.header.logo.alt" width="89" height="31" />
-      </NuxtLink>
-      <NuxtLink v-else to="/" class="fallback">
-        {{ alpine.title }}
+      <NuxtLink to="/">
+        <img src="/ruta/a/tu/logo.png" alt="Mi Logo" width="120" height="60" />
       </NuxtLink>
     </div>
 
@@ -62,69 +58,13 @@ css({
         display: 'none'
       }
     },
-    '.overlay': {
-      position: 'absolute',
-      top: 'calc(var(--header-padding) + var(--logo-height) + {space.2})',
-      backgroundColor: '{alpine.backdrop.backgroundColor}',
-      border: '1px solid {color.gray.200}',
-      borderRadius: '{radii.md}',
-      padding: '{space.6}',
-      paddingRight: '{space.24}',
-      fontSize: '{text.lg.fontSize}',
-      lineHeight: '{text.lg.lineHeight}',
-      fontWeight: '{fontWeight.medium}',
-      transition: 'all 250ms',
-      perspective: '2000px',
-      transformOrigin: 'top',
-      backdropFilter: 'blur(20px)',
-      willChange: 'opacity, transform',
-      '&:not(.show)': {
-        opacity: 0,
-        transform: 'translateY(-10px) rotateY(-8deg) rotateX(-20deg)',
-        '.left &&': {
-          transform: 'translateY(-10px) rotateY(8deg) rotateX(-20deg)',
-        },
-        pointerEvents: 'none'
-      },
-      '.left &&': {
-        right: 0,
-        padding: '{space.6}',
-        paddingLeft: '{space.16}',
-        textAlign: 'right'
-      },
-      '@sm': {
-        display: 'none'
-      },
-      '@dark': {
-        borderColor: '{color.gray.800}',
-      }
-    },
     '.logo': {
       display: 'flex',
-      gridColumn: 'span 12 / span 12',
+      justifyContent: 'center',
       height: 'var(--logo-height)',
       a: {
         display: 'flex',
       },
-      '.center &&': {
-        gridColumn: 'span 12 / span 12',
-        justifyContent: 'center',
-      },
-      '.right &&': {
-        justifyContent: 'flex-end',
-      },
-      '@sm': {
-        gridColumn: 'span 4 / span 4',
-        gridColumnStart: 'auto',
-        '.right &&': {
-          order: 2,
-        },
-      },
-      '.fallback': {
-        fontSize: '{text.2xl.fontSize}',
-        lineHeight: '{text.2xl.lineHeight}',
-        fontWeight: '{fontWeight.semibold}'
-      }
     },
     '.main-nav': {
       display: 'none',
@@ -134,18 +74,9 @@ css({
         fontSize: '{text.xl.fontSize}',
         lineHeight: '{text.xl.lineHeight}',
         fontWeight: '{fontWeight.medium}',
-        '.center &&': {
-          gridColumn: 'span 12 / span 12',
-          justifyContent: 'center',
-        },
-        '.right &&': {
-          justifyContent: 'flex-start',
-        },
-        '.left &&': {
-          justifyContent: 'flex-end',
-        },
       }
     },
   }
 })
 </style>
+
