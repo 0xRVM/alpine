@@ -1,42 +1,42 @@
-// https://github.com/nuxt-themes/alpine/blob/main/nuxt.schema.ts
 export default defineAppConfig({
   alpine: {
-    title: 'Alpine',
-    description: 'The minimalist blog theme',
+    title: 'Primate',
+    description: 'Reflexiones sobre Esports y la evolución de Primate',
     image: {
-      src: '/social-card-preview.png',
-      alt: 'An image showcasing my project.',
+      src: '/primatelogo-blanco.png',  // Ruta de tu logo blanco
+      alt: 'Primate Logo',
       width: 400,
       height: 300
     },
     header: {
-      position: 'right', // possible value are : | 'left' | 'center' | 'right'
+      position: 'right',  // posible valor: 'left' | 'center' | 'right'
       logo: {
-        path: '/logo.svg', // path of the logo
-        pathDark: '/logo-dark.svg', // path of the logo in dark mode, leave this empty if you want to use the same logo
-        alt: 'alpine' // alt of the logo
+        path: '/primatelogo-blanco.png',  // Ruta del logo blanco
+        pathDark: '/primatelogo-negro.png',  // Ruta del logo en modo oscuro
+        alt: 'Primate Logo'  // Texto alternativo para el logo
       }
     },
     footer: {
       credits: {
-        enabled: true, // possible value are : true | false
-        repository: 'https://www.github.com/nuxt-themes/alpine' // our github repository
+        enabled: true,  // mostrar créditos
+        repository: 'https://www.github.com/tu-repo/primate'  // Ruta de tu repositorio
       },
-      navigation: true, // possible value are : true | false
-      alignment: 'center', // possible value are : 'none' | 'left' | 'center' | 'right'
-      message: 'Follow me on' // string that will be displayed in the footer (leave empty or delete to disable)
+      navigation: true,  // Mostrar la navegación en el footer
+      alignment: 'center',  // Alineación del footer: 'none' | 'left' | 'center' | 'right'
+      message: 'Reflexiones sobre la evolución de Primate'  // Mensaje en el footer
     },
     socials: {
-      twitter: 'nuxtlabs',
-      instagram: 'atinuxt',
+      twitter: 'https://x.com/primateclan',  // Puedes añadir tus redes sociales o dejar en blanco
+      instagram: 'https://www.instagram.com/primateclan/',
       linkedin: {
         icon: 'uil:linkedin',
         label: 'LinkedIn',
-        href: 'https://www.linkedin.com/company/nuxtlabs'
+        href: 'https://www.linkedin.com/company/primateclan'  // Ruta de LinkedIn
       }
     },
     form: {
-      successMessage: 'Message sent. Thank you!'
+      successMessage: 'Mensaje enviado. ¡Gracias!'  // Mensaje al enviar formulario
     }
   }
 })
+
