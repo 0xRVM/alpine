@@ -13,7 +13,7 @@ const show = ref(false)
       <MainNav @link-click="show = !show" />
     </div>
 
-<div class="logo">
+<div class="logo" style="display: block !important;">
 <img src="/primatelogo-blanco.png" alt="Logo Primate Blanco" width="120" height="60" style="display: block;" />
 
 </div>
