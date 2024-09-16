@@ -13,13 +13,11 @@ const show = ref(false)
       <MainNav @link-click="show = !show" />
     </div>
 
-   <img src="/primatelogo.png" alt="Logo Primate" width="120" height="60" />
-
     <div class="logo">
-  <NuxtLink to="/">
-    <img src="/primatelogo-blanco.png" alt="Logo Primate Blanco" width="120" height="60" />
-  </NuxtLink>
-</div>
+      <NuxtLink to="/">
+        <img src="/primatelogo-blanco.png" alt="Logo Primate Blanco" width="120" height="60" />
+      </NuxtLink>
+    </div>
 
     <div class="main-nav">
       <MainNav />
@@ -72,4 +70,3 @@ css({
   }
 })
 </style>
-
