@@ -1,10 +1,10 @@
 export default defineAppConfig({
   alpine: {
     title: 'Primate',
-    description: 'The minimalist blog theme',
+    description: 'Reflexiones sobre Esports y la evolución de Primate',
     image: {
-      src: '/social-card-preview.png',
-      alt: 'An image showcasing my project.',
+      src: '/primatelogo-blanco.png',
+      alt: 'Primate Logo',
       width: 400,
       height: 300
     },
@@ -19,7 +19,7 @@ export default defineAppConfig({
     footer: {
       credits: {
         enabled: true,
-        text: 'Alpine',
+        text: 'Primate',
         repository: 'https://www.github.com/nuxt-themes/alpine'
       },
       navigation: true,
